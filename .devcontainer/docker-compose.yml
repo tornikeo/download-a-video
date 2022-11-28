@@ -16,13 +16,18 @@ services:
     # docker-compose.yml file (the first in the devcontainer.json "dockerComposeFile"
     # array). The sample below assumes your primary file is in the root of your project.
     #
-    # build:
-    #   context: .
-    #   dockerfile: .devcontainer/Dockerfile
-
+    build:
+      context: .
+      args:
+        - BASE_IMAGE=node:lts
+        - DEV_TOOLS="git"
+      # dockerfile: .devcontainer/Dockerfile
+    environment:
+      - NODE_ENV=development
+    working_dir: /code/app
     volumes:
       # Update this to wherever you want VS Code to mount the folder of your project
-      - .:/workspace:cached
+      - .:/code/app:cached
 
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
       # - /var/run/docker.sock:/var/run/docker.sock 
@@ -35,4 +40,5 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
+    entrypoint: /bin/sh -c "while sleep 1000; do :; done"
  

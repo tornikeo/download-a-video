@@ -1,0 +1,7 @@
+ARG BASE_IMAGE
+ARG DEV_TOOLS
+FROM $BASE_IMAGE
+RUN apt update
+RUN apt install -y $DEV_TOOLS || true
+ENV PORT=80
+EXPOSE $PORT
