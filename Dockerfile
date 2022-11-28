@@ -3,5 +3,9 @@ ARG DEV_TOOLS
 FROM $BASE_IMAGE
 RUN apt update
 RUN apt install -y $DEV_TOOLS || true
+
+USER $USERNAME
+
 ENV PORT=80
+WORKDIR /code/app
 EXPOSE $PORT
