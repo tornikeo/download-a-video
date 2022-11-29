@@ -1,4 +1,5 @@
 <script>
+    import Range from "$lib/components/Range.svelte";
 
 </script>
 
@@ -7,7 +8,7 @@
     <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<article class="prose lg:prose-xl">
+<article class="prose output-markdown lg:prose-xl">
     <h1>Garlic bread with cheese: What the science tells us</h1>
     <p>For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween.</p>
     <p>But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country.</p>
@@ -16,6 +17,7 @@
         <button class="btn">Hover me</button>
     </div>
 
+    <Range/>
 
     <div class="form-control w-full max-w-xs">
         <label class="label">
@@ -42,7 +44,7 @@
 
     <button class="btn btn-primary">Button</button>
 
-    <div class="form-control w-full max-w-xs">
+    <!-- <div class="form-control w-full max-w-xs">
         <label class="label">
             <span class="label-text">Pick a file</span>
             <span class="label-text-alt">Alt label</span>
@@ -52,7 +54,7 @@
             <span class="label-text-alt">Alt label</span>
             <span class="label-text-alt">Alt label</span>
         </label>
-    </div>
+    </div> -->
 
     <h1 class="text-3xl font-bold underline">
         Hello world!
