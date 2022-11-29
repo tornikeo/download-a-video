@@ -10,3 +10,14 @@ node_modules
 .output
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+src/lib/gradio/src/Checkbox.svelte
+src/lib/gradio/src/CheckboxGroup.svelte
+src/lib/gradio/src/ColorPicker.svelte
+src/lib/gradio/src/Dropdown.svelte
+src/lib/gradio/src/index.ts
+src/lib/gradio/src/Number.svelte
+src/lib/gradio/src/Radio.svelte
+src/lib/gradio/src/Range.svelte
+src/lib/gradio/src/Textbox.svelte
+src/lib/gradio/src/utils.ts
+src/lib/components/Range2.svelte
